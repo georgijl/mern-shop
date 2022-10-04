@@ -16,7 +16,7 @@ import Account from "./components/account/Account";
 import { getUser } from "./utils/getUserToken";
 import axios from "axios";
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   const [loginToggle, setLoginToggle] = useState(false);
@@ -75,6 +75,6 @@ function App() {
       </main>
     </Router>
   );
-}
+};
 
 export default App;

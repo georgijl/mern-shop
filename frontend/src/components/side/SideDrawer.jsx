@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 // Components
 import LoginNav from "../login/Login";
 
-function SideDrawer({ setLoginToggle, hideLogin }) {
+const SideDrawer = ({ setLoginToggle, hideLogin }) => {
   const show = useSelector((state) => state.condition.show);
 
   const sideDrawerClass = ["sidedrawer"];
@@ -40,6 +40,6 @@ function SideDrawer({ setLoginToggle, hideLogin }) {
       </ul>
     </div>
   );
-}
+};
 
 export default SideDrawer;

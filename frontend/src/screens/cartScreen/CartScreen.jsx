@@ -17,7 +17,7 @@ const PUBLIC_KEY =
 
 const stripeTestPromise = loadStripe(PUBLIC_KEY);
 
-function CartScreen() {
+const CartScreen = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -92,6 +92,6 @@ function CartScreen() {
       </div>
     </>
   );
-}
+};
 
 export default CartScreen;

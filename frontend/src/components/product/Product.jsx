@@ -1,7 +1,7 @@
 import "./Product.scss";
 import { Link } from "react-router-dom";
 
-function Product({ imageUrl, name, price, description, productId }) {
+const Product = ({ imageUrl, name, price, description, productId }) => {
   return (
     <div className="product">
       <img src={imageUrl} alt={name} />
@@ -15,6 +15,6 @@ function Product({ imageUrl, name, price, description, productId }) {
       </div>
     </div>
   );
-}
+};
 
 export default Product;

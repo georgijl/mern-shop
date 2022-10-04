@@ -5,7 +5,7 @@ import "../login/LoginForm.scss";
 import axios from "axios";
 import { validationSchema } from "./RegisterValidationSchema";
 
-function RegisterForm({ setExpanded }) {
+const RegisterForm = ({ setExpanded }) => {
   const dispatch = useDispatch();
   const wrong = useSelector((state) => state.condition.error);
   const active = useSelector((state) => state.condition.toggle);
@@ -126,6 +126,6 @@ function RegisterForm({ setExpanded }) {
       )}
     </>
   );
-}
+};
 
 export default RegisterForm;

@@ -3,7 +3,7 @@ import "./CartItem.scss";
 
 import { Link } from "react-router-dom";
 
-function CartItem({ item, qtyChangeHandler, removeHandler }) {
+const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
   return (
     <div className="cart-item">
       <div className="cart-item__image">
@@ -32,6 +32,6 @@ function CartItem({ item, qtyChangeHandler, removeHandler }) {
       </button>
     </div>
   );
-}
+};
 
 export default CartItem;

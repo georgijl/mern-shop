@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { validationSchema } from "./ResetPasswordValidationSchema";
 
-function ResetPassword({ setSuccessChange }) {
+const ResetPassword = ({ setSuccessChange }) => {
   const dispatch = useDispatch();
   // Call data
   const onSubmit = async (values) => {
@@ -94,6 +94,6 @@ function ResetPassword({ setSuccessChange }) {
       </form>
     </>
   );
-}
+};
 
 export default ResetPassword;

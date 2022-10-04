@@ -10,7 +10,7 @@ import { getProducts as listProducts } from "../../redux/actions/productActions"
 // Components
 import Product from "../../components/product/Product";
 
-function HomeScreen() {
+const HomeScreen = () => {
   const dispatch = useDispatch();
 
   const getProducts = useSelector((state) => state.getProducts);
@@ -49,6 +49,6 @@ function HomeScreen() {
       </animated.div>
     </div>
   );
-}
+};
 
 export default HomeScreen;

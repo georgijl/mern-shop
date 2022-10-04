@@ -13,7 +13,7 @@ import { getProducts as listProducts } from "../../redux/actions/productActions"
 // Components
 import Product from "../../components/product/Product";
 
-function ProductScreen({ match, history }) {
+const ProductScreen = ({ match, history }) => {
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
 
@@ -233,6 +233,6 @@ function ProductScreen({ match, history }) {
       </div>
     </>
   );
-}
+};
 
 export default ProductScreen;

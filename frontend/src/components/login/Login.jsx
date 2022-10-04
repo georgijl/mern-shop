@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Login.scss";
 
-function LoginNav({ setLoginToggle, hideLogin }) {
+const LoginNav = ({ setLoginToggle, hideLogin }) => {
   const dispatch = useDispatch();
+  const username = useSelector((state) => state.condition.username);
 
   const [opened, setOpened] = useState(false);
   const handleOpened = () => setOpened((s) => !s);
@@ -11,8 +12,6 @@ function LoginNav({ setLoginToggle, hideLogin }) {
     window.location.reload(false);
     localStorage.removeItem("token");
   };
-
-  const username = useSelector((state) => state.condition.username);
 
   return (
     <div className="user-wrapper">
@@ -46,6 +45,6 @@ function LoginNav({ setLoginToggle, hideLogin }) {
       )}
     </div>
   );
-}
+};
 
 export default LoginNav;

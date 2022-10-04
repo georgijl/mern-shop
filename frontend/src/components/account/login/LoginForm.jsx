@@ -9,7 +9,7 @@ import { Redirect } from "react-router-dom";
 import ResetPassword from "../resetPassword/ResetPassword";
 import { validationSchema } from "./LoginValidationSchema";
 
-function LoginForm({ isExpanded, setExpanded, setHideLogin }) {
+const LoginForm = ({ isExpanded, setExpanded, setHideLogin }) => {
   const [success, setSuccess] = useState(false);
   const [successChange, setSuccessChange] = useState(false);
 
@@ -51,9 +51,7 @@ function LoginForm({ isExpanded, setExpanded, setHideLogin }) {
 
   const loginFormTransition = ["login-form__wrapper__top__back"];
 
-  if (isExpanded) {
-    loginFormTransition.push("form-transition");
-  }
+  if (isExpanded) loginFormTransition.push("form-transition");
 
   return (
     <>
@@ -165,6 +163,6 @@ function LoginForm({ isExpanded, setExpanded, setHideLogin }) {
       )}
     </>
   );
-}
+};
 
 export default LoginForm;

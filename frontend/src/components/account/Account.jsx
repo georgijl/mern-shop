@@ -6,7 +6,7 @@ import "./login/LoginForm.scss";
 import LoginForm from "./login/LoginForm";
 import RegisterForm from "./register/Register";
 
-function Account({ loginToggle, setLoginToggle, setHideLogin }) {
+const Account = ({ loginToggle, setLoginToggle, setHideLogin }) => {
   const active = useSelector((state) => state.condition.toggle);
 
   const [isExpanded, setExpanded] = useState(false);
@@ -36,6 +36,6 @@ function Account({ loginToggle, setLoginToggle, setHideLogin }) {
       </div>
     </div>
   );
-}
+};
 
 export default Account;

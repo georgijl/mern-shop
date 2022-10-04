@@ -1,0 +1,118 @@
+.navbar {
+  width: 100%;
+  height: 110px;
+  background-color: #171717;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  z-index: 50;
+
+  &__logo {
+    a {
+      text-decoration: none;
+    }
+
+    h2 {
+      color: #f4f4f4;
+      font-size: 1.4rem;
+      cursor: pointer;
+      @media screen and (max-width: 500px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    .shop-link:hover {
+      transition: 0.2s linear;
+      transform: scale(1.15);
+
+      a {
+        color: #dd219e;
+        font-weight: 500;
+      }
+    }
+
+    li {
+      padding-left: 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: #f4f4f4;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        span {
+          display: flex;
+          align-items: center;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
+  }
+}
+.cart__link {
+  background: #333;
+  padding: 10px;
+  border-radius: 8px;
+
+  &:hover {
+    background: #dd219e;
+    color: #f4f4f4;
+    transition: 0.2s linear;
+    transform: scale(1.05);
+  }
+
+  .fa-shopping-cart {
+    margin-right: 20px;
+  }
+}
+
+.cart-logo__badge {
+  width: 30px;
+  height: 30px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  margin-left: 8px;
+  color: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.hamburger__menu {
+  width: 30px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  div {
+    width: 100%;
+    height: 3px;
+    background: #f4f4f4;
+  }
+
+  &:hover {
+    div {
+      background: #dd219e;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    display: flex;
+  }
+}

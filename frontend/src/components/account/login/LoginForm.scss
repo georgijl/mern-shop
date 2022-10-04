@@ -1,0 +1,218 @@
+.login-form {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-out;
+  transform: translateY(-150%);
+  z-index: 500;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 19px;
+    background-color: #fff;
+    position: relative;
+    max-width: 400px;
+    min-height: 600px;
+    overflow: hidden;
+
+    &__top {
+      width: 100%;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 1.8em;
+      padding-bottom: 5em;
+
+      &__back {
+        position: absolute;
+        top: -382px;
+        left: -187px;
+        transform: rotate(60deg);
+        width: 160%;
+        height: 550px;
+        border-radius: 55%;
+        background: rgb(241, 196, 15);
+        background: linear-gradient(
+          58deg,
+          rgba(241, 196, 15, 1) 20%,
+          rgba(243, 172, 18, 1) 100%
+        );
+      }
+
+      h2 {
+        width: 80%;
+        font-size: 40px;
+        color: white;
+        z-index: 20;
+      }
+
+      &__login {
+        padding-top: 20px;
+        font-size: 14px;
+        color: white;
+        z-index: 20;
+        margin-bottom: 50px;
+      }
+
+      &__btn {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        background-color: rgb(241, 196, 15);
+        &:hover {
+          transition: 0.3s linear;
+          transform: scale(1.05);
+        }
+      }
+
+      &__forgot {
+        display: block;
+        width: 80%;
+        margin: 0 auto 30px;
+        font-size: 14px;
+        color: #818181;
+        cursor: pointer;
+      }
+
+      &__new-acc {
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+        font-size: 14px;
+        color: #818181;
+        margin-bottom: 20px;
+
+        span {
+          font-size: 16px;
+          font-weight: bold;
+          color: rgb(241, 196, 15);
+          cursor: pointer;
+        }
+      }
+
+      &__header {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+
+        .close-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          border-radius: 50%;
+          z-index: 20;
+          cursor: pointer;
+          font-size: 18px;
+
+          &:hover {
+            color: #fff;
+            background-color: #dd219e;
+          }
+        }
+      }
+    }
+
+    &__par {
+      margin-bottom: 30px;
+    }
+
+    &__form-group {
+      input {
+        display: block;
+        margin: 0px auto;
+        width: 80%;
+        min-height: 50px;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(233, 231, 231);
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
+
+      input:focus {
+        outline: none;
+        border-bottom: 3px solid rgb(241, 196, 15);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 360px;
+    }
+  }
+}
+
+.form {
+  transform: translateY(0);
+}
+
+.hide-login {
+  transform: translateY(-100%);
+}
+
+.form-transition {
+  animation: transform-animation 1.5s linear;
+  z-index: 5;
+}
+
+@keyframes transform-animation {
+  0% {
+    transform: rotate(60deg);
+    width: 160%;
+    height: 550px;
+    border-radius: 55%;
+  }
+  50% {
+    width: 250%;
+    height: 1500px;
+    border-radius: 20%;
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(60deg);
+    width: 160%;
+    height: 550px;
+    border-radius: 55%;
+  }
+}
+
+.error {
+  padding: 5px 0px;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  color: #dd2d21;
+  font-size: 16px;
+}
+
+.wrong-data {
+  z-index: 100;
+  margin: 0px auto 10px;
+  width: 80%;
+  color: #dd2d21;
+}
+
+.success-register {
+  z-index: 100;
+  margin: 0px auto 10px;
+  width: 80%;
+  color: #27dd21;
+}

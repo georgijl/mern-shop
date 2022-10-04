@@ -1,0 +1,8 @@
+export const SHOW_PAYMENT = "SHOW_PAYMENT";
+export const TOGGLE_LOGIN_FORM = "TOGGLE_LOGIN_FORM";
+export const OPEN_LOGIN_FORM = "OPEN_LOGIN_FORM";
+export const SUCCESS_PAYMENT = "SUCCESS_PAYMENT";
+export const SUCCESS_PAYMENT_MESSAGE = "SUCCESS_PAYMENT_MESSAGE";
+export const USER_NAME = "USER_NAME";
+export const SHOW = "SHOW";
+export const USER_TOKEN_ID = "USER_TOKEN_ID";

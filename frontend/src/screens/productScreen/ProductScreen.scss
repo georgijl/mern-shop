@@ -1,0 +1,221 @@
+.product-screen {
+  max-width: 1300px;
+  margin: 1rem auto;
+  display: flex;
+  margin-bottom: 50px;
+
+  &__left {
+    display: flex;
+    flex: 0.8;
+    max-height: 600px;
+
+    &__image {
+      margin: 1rem;
+      flex: 0.4;
+
+      @media screen and (max-width: 960px) {
+        flex: 1;
+      }
+    }
+
+    &__name {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+
+  &__right {
+    &__image {
+      margin: 1rem;
+      flex: 0.4;
+
+      @media screen and (max-width: 960px) {
+        flex: 1;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      flex: 0.2;
+    }
+
+    @media screen and (max-width: 960px) {
+      flex: 1;
+      padding: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+.left__info {
+  margin: 1rem;
+  flex: 0.4;
+  background: #fff;
+  height: fit-content;
+  font-size: 0.9rem;
+
+  p {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.right__info {
+  width: 250px;
+  margin: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+
+  p {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:last-child {
+      border: none;
+    }
+
+    button {
+      grid-column: 1/-1;
+      padding: 10px 16px;
+      background: #171717;
+      color: #f4f4f4;
+      border: 1px solid #171717;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+
+  select {
+    padding: 10px 16px;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.carousel-products {
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    margin: 0 auto 100px;
+    max-width: 900px;
+    overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+      max-width: 300px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      max-width: 330px;
+    }
+  }
+
+  &__grid {
+    display: flex;
+  }
+
+  &__left {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      left: 10px;
+    }
+
+    .fa-chevron-left {
+      font-size: 36px;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+
+    .fa-chevron-right {
+      font-size: 36px;
+    }
+
+    @media screen and (max-width: 767px) {
+      right: 10px;
+    }
+  }
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  animation: anim-bckg 0.3s linear;
+  background-color: gray;
+}
+
+.left-opened {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.opened-image {
+  img {
+    display: block;
+    animation: anim-img 0.3s linear;
+  }
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    z-index: 50;
+
+    img {
+      position: fixed;
+      width: 90%;
+    }
+  }
+}
+
+@keyframes anim-img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-bckg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
